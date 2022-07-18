@@ -32,7 +32,9 @@ main {
 	width: 800px;
 	background-color: #fff;
 	margin: 0 10px;
+	margin-top: -40px;
 	padding: 30px;
+	border-radius: 4px;
 }
 #searchProfesi {
 	width: 100%;
@@ -76,6 +78,7 @@ main {
 	margin: 15px 0;
 	font-size: 24px;
 	color: var(--cyan1);
+	font-weight: 700;
 }
 .imgLogo h3 {
 	font-weight: 500;
@@ -99,10 +102,13 @@ main {
 }
 .tagUlProfesi {
 	display: flex;
-	gap: 10px;
+	gap: 15px;
+	flex-wrap: wrap;
 }
 .tagUlProfesi li {
 	color: var(--cyan2);
+	background-color: var(--background);
+	padding: 6px;
 }
 .pclProfesi {
 	display: flex;
@@ -115,4 +121,37 @@ main {
 	.div_1, #searchForm {
 		width: auto;
 	}
+}
+@media screen and (max-width: 768px) {
+	.imgLogo h1 {
+		font-size: 18px;
+	}
+}
+@media screen and (max-width: 588px) {
+	.div_1 {
+		padding: 15px;
+		margin: 40px 10px;
+	}
+	.div_1, .imgLogo {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.imgLogo {
+		border-bottom: 1px solid var(--colorFont);
+		width: 100%;
+	}
+	.logoProfesi {
+		margin-top: -40px;
+		width: 50px;
+		height: 50px;
+	}
+	.imgLogo h1 {
+		margin: 8px 0;
+	}
+	.tagUlProfesi, .pclProfesi {
+		padding: 10px 0;
+	}
+}
+@media screen and (max-width: 375px) {
+
 }

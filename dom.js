@@ -68,11 +68,9 @@ const dataProfesi = (d) => {
 function liveSearch() {
 	let boxes = document.querySelectorAll('.div_1');
     const ulLiTags = document.querySelectorAll('#ulTags li');
-    console.log(ulLiTags)
     for(ul of ulLiTags) {
     	// console.log(ul)
     	const tag = ul.outerText
-    	console.log(tag)
 	    for (var i = 0; i < boxes.length; i++) {
 	        if (boxes[i].getAttribute('data-languages').toLowerCase().includes(tag.toLowerCase()) || boxes[i].getAttribute('data-role').toLowerCase().includes(tag.toLowerCase()) || boxes[i].getAttribute('data-tools').toLowerCase().includes(tag.toLowerCase())) {
 	            boxes[i].classList.remove("isHiden");
