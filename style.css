@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+:root {
+	--background: hsl(180, 52%, 96%);
+	--tableFilter: hsl(180, 31%, 95%);
+	--colorFont: hsl(180, 8%, 52%);
+	--cyan1: hsl(180, 14%, 20%);
+	--cyan2: hsl(180, 29%, 50%);
+}
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+}
+body {
+	font-family: 'League Spartan', sans-serif;
+	font-size: 15px;
+	background-color: var(--background);
+}
+header {
+	height: 150px;
+	background: url('./images/bg-header-desktop.svg') no-repeat;
+	background-size: cover;
+	object-fit: cover;
+	background-color: var(--cyan2);
+}
+main {
+	display: flex;
+	justify-content: center;
+}
+#searchForm {
+	width: 800px;
+	background-color: #fff;
+	margin: 0 10px;
+	padding: 30px;
+}
+#searchProfesi {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	font-size: 17px;
+}
+#searchProfesi:focus {
+	outline: none;
+}
+#searchForm, #ulTags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+#ulTags li {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	background-color: var(--background);
+	padding-left: 10px;
+	color: var(--cyan2);
+	border-radius: 4px;
+	overflow: hidden;
+}
+#ulTags li p img {
+	background-color: var(--cyan2);
+	padding: 10px;
+	cursor: pointer;
+}
+#ulTags li p {
+	display: flex;
+	align-items: center;
+}
+.imgLogo {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+.imgLogo h1 {
+	margin: 15px 0;
+	font-size: 24px;
+	color: var(--cyan1);
+}
+.imgLogo h3 {
+	font-weight: 500;
+	font-size: 19px;
+	color: var(--cyan2);
+}
+.div_1 {
+	width: 800px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 6px 9px 21px -7px rgba(91,164,164,0.74);
+	padding: 30px;
+	margin: 20px 10px;
+	border-radius: 4px;
+	border-left: 6px solid var(--cyan2);
+	background-color: #fff;
+}
+.isHiden {
+	display: none;
+}
+.tagUlProfesi {
+	display: flex;
+	gap: 10px;
+}
+.tagUlProfesi li {
+	color: var(--cyan2);
+}
+.pclProfesi {
+	display: flex;
+	gap: 10px;
+}
+.pclProfesi p {
+	color: var(--colorFont);
+}
+@media screen and (max-width: 867px) {
+	.div_1, #searchForm {
+		width: auto;
+	}
+}
