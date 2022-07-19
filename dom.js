@@ -58,15 +58,6 @@ const dataProfesi = (d) => {
 		divNewFeatured.classList.add('newFeatured');
 		divNewFeatured.append(companyProfesi);
 
-		// bagian mengecek apakah daftar profesi new == true dan featured == true
-		if (newProfesi && featuredProfesi) {
-			newP.classList.add('newProfesi');
-			newF.classList.add('featuredProfesi');
-			divNewFeatured.append(companyProfesi, newP, newF)
-		} else if (newProfesi) {
-			newP.classList.add('newProfesi')
-			divNewFeatured.append(companyProfesi, newP)
-		}
 
 		const div_1_0 = document.createElement('div');
 		div_1_0.append(divNewFeatured, positionProfesi, pclProfesi);
@@ -84,6 +75,16 @@ const dataProfesi = (d) => {
 
 		divProfesi.append(divImgLogo, div_2);
 
+		// bagian mengecek apakah daftar profesi new == true dan featured == true
+		if (newProfesi && featuredProfesi) {
+			newP.classList.add('newProfesi');
+			newF.classList.add('featuredProfesi');
+			divProfesi.classList.add('activeProfesi')
+			divNewFeatured.append(companyProfesi, newP, newF)
+		} else if (newProfesi) {
+			newP.classList.add('newProfesi')
+			divNewFeatured.append(companyProfesi, newP)
+		}
 
 		daftar.append(divProfesi);
 	})
@@ -110,10 +111,11 @@ let typeInterval = 500;
 let formInput = document.getElementById('searchForm');
 
 formInput.addEventListener('submit', (event) => {
-	event.preventDefault()
+	event.preventDefault();
     clearTimeout(typingTimer);
     typingTimer = setTimeout(liveSearch, typeInterval);
    searchTagInput();
+   formInput.reset()
 });
 
 
@@ -134,6 +136,7 @@ const searchTagInput = () => {
 	})
 }
 
+// bagian fitur clear tags
 clearTags.addEventListener('click', function() {
 	setTimeout(function() {
 		window.location.reload();
