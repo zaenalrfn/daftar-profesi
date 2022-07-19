@@ -36,6 +36,9 @@ main {
 	padding: 30px;
 	border-radius: 4px;
 }
+.daftarInput {
+	display: inline;
+}
 #searchProfesi {
 	width: 100%;
 	padding: 10px;
@@ -149,6 +152,10 @@ main {
 	header {
 		background: url(./images/bg-header-desktop.svg);
 		background-color: var(--cyan2);
+	}
+	#searchForm {
+		position: sticky;
+		top: 10px;
 	}
 	.div_1 {
 		padding: 15px;
