@@ -142,9 +142,3 @@ clearTags.addEventListener('click', function() {
 		window.location.reload();
 	}, 100)
 })
-
-// refrensi
-// https://css-tricks.com/in-page-filtered-search-with-vanilla-javascript/
-
-
-// fitur selanjutnya harus ada clear input
