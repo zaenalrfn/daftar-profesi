@@ -2,6 +2,10 @@
 // membuat component dan menampilkan data daftar profesi
 const dataProfesi = (d) => {
 	const data = d.map((data) => {
+
+		const newProfesi = data.new;
+		const featuredProfesi = data.featured;
+
 		const dataLanguages = data.languages.join(' '),
 			  dataTools = data.tools.join(' ');
 		let	daftar = document.getElementById('daftar');
@@ -41,10 +45,29 @@ const dataProfesi = (d) => {
 		`
 		const div_2 = document.createElement('div');
 		div_2.classList.add('div_2');
-		div_2.append(tagUlProfesi)
+		div_2.append(tagUlProfesi);
+
+		const newP = document.createElement('h4'),
+			  newF = document.createElement('h4');
+			  newP.innerText = 'NEW!'
+			  newF.innerText = 'FEATURED'
+
+
+		const divNewFeatured = document.createElement('div');
+		divNewFeatured.classList.add('newFeatured');
+		divNewFeatured.append(companyProfesi);
+
+		if (newProfesi && featuredProfesi) {
+			newP.classList.add('newProfesi');
+			newF.classList.add('featuredProfesi');
+			divNewFeatured.append(companyProfesi, newP, newF)
+		} else if (newProfesi) {
+			newP.classList.add('newProfesi')
+			divNewFeatured.append(companyProfesi, newP)
+		}
 
 		const div_1_0 = document.createElement('div');
-		div_1_0.append(companyProfesi, positionProfesi, pclProfesi);
+		div_1_0.append(divNewFeatured, positionProfesi, pclProfesi);
 
 		const divImgLogo = document.createElement('div');
 		divImgLogo.classList.add('imgLogo');

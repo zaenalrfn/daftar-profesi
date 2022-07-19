@@ -117,6 +117,24 @@ main {
 .pclProfesi p {
 	color: var(--colorFont);
 }
+.newFeatured {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+.newProfesi, .featuredProfesi {
+	padding: 5px;
+	border-radius: 25px;
+	color: #fff;
+	font-weight: 500;
+	font-size: 12px;
+}
+.newProfesi {
+	background-color: var(--cyan2);
+}
+.featuredProfesi {
+	background-color: var(--cyan1);
+}
 @media screen and (max-width: 867px) {
 	.div_1, #searchForm {
 		width: auto;
@@ -128,6 +146,10 @@ main {
 	}
 }
 @media screen and (max-width: 588px) {
+	header {
+		background: url(./images/bg-header-desktop.svg);
+		background-color: var(--cyan2);
+	}
 	.div_1 {
 		padding: 15px;
 		margin: 40px 10px;
@@ -151,7 +173,4 @@ main {
 	.tagUlProfesi, .pclProfesi {
 		padding: 10px 0;
 	}
-}
-@media screen and (max-width: 375px) {
-
 }
