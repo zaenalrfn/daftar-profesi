@@ -119,6 +119,7 @@ formInput.addEventListener('submit', (event) => {
 
 // membuat input tag
 const searchTagInput = () => {
+	const clearTags = document.getElementById('clearTags');
 	let searchTagInput = document.getElementById('searchProfesi').value,
 		  ulTags = document.getElementById('ulTags'),
 		  liTags = document.createElement('li'),
@@ -133,6 +134,11 @@ const searchTagInput = () => {
 	})
 }
 
+clearTags.addEventListener('click', function() {
+	setTimeout(function() {
+		window.location.reload();
+	}, 100)
+})
 
 // refrensi
 // https://css-tricks.com/in-page-filtered-search-with-vanilla-javascript/
