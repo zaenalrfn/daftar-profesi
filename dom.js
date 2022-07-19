@@ -3,6 +3,7 @@
 const dataProfesi = (d) => {
 	const data = d.map((data) => {
 
+		// mengambil data new profesi dan featured profesi
 		const newProfesi = data.new;
 		const featuredProfesi = data.featured;
 
@@ -57,6 +58,7 @@ const dataProfesi = (d) => {
 		divNewFeatured.classList.add('newFeatured');
 		divNewFeatured.append(companyProfesi);
 
+		// bagian mengecek apakah daftar profesi new == true dan featured == true
 		if (newProfesi && featuredProfesi) {
 			newP.classList.add('newProfesi');
 			newF.classList.add('featuredProfesi');
@@ -135,3 +137,6 @@ const searchTagInput = () => {
 
 // refrensi
 // https://css-tricks.com/in-page-filtered-search-with-vanilla-javascript/
+
+
+// fitur selanjutnya harus ada clear input
